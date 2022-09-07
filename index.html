@@ -1,58 +1,75 @@
 <!DOCTYPE HTML>
 <html> 
   <head>
-  <style type="text/css">
-    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
-    body{
-      margin:10px 80px;
-      font-family: 'Tajawal', sans-serif;
-    }
-    nav{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    nav h1{
-      font-family: 'Crimson Text', serif;
-      font-size:30px;
-    }
-    nav .onglets{
-      margin-top: 35px ;
-    }
-    nav .onglets a{
-      text-decoration: none;
-      color: #7f7e7e;
-      margin-right:10px ;
-    }
-    </style> 
+   <style type="text/css">
+ *{
+   padding: 0;
+   margin:  0;
+   font-family: 'Josefin Sans', sans-serif;
+   box-sizing: border-box;
+ }
+ .hero{
+  height: 100vh;
+  width: 100%;
+  background-image: url(../PORTFOLIO/Image2.jfif) ;
+  background-size: cover;
+  background-position: center;
+ }
+ nav{ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top:45px;
+  padding-left: 8%;
+  padding-right: 8%;
+ }
+ .logo{
+   color: white;
+   font-size: 35px;
+   letter-spacing: 1px;
+   cursor: pointer;
+ }
+ span{
+  color: #f9004d;
+ }
+ nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+ }
+ nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+ }
+ nav ul li a:hover{
+  color: #f9004d;
+  transition: 0.4s;
+ }
+    
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title> Portfolio website </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-   </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
    <body>
-      <nav>
-         <h1> Blogging</h1>
-         <div class="onglets">
-          <a href="">Home </a>
-          <a href="">Formations </a>
-          <a href="">Articles</a>
-     
-</div>
-</nav>
-   <section class="articles">
-     <div class="articles">
-       <div class="left">
-         <img src="Pic1.jpg">
-       </div>
-       <div class="right">
-         <p class="date"></p>
-       </div>
-     </div>
-   </section>
-
-
+  <div class="hero">
+    <nav>
+      <h2 class="logo">Portfo<span>lio</span></h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+      <a href="#" class="btn"> Subscribe </a>
+    </nav>
 
    </body>
-   </html>
