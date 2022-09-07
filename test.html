@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1 align ="center"; style= "background-color:#ADDFFF; border:double;"
+
+Reservation dhotel> </h1>
+
+
+
+
+
+</head>
+
+<body background=>
+
+    
+
+
+    
+      <fieldset>
+
+ <center>
+    
+    
+        
+            <form name="form1">
+            <label for='nom'>nom:</label><br><br>
+
+    <input type="text" id="nom" name="nom"><br><br>
+    
+
+    <label for='prenom'>prenom</label><br><br>
+
+<input type="text" id="prenom" name="prenom">
+<br><br>
+
+ <label for='dateA'>Arrivée:</label><br><br>
+
+ <input type="date" id="dateA" name="dateAR"><br><br>
+
+  <label for='dateD'>Depart:</label><br><br>
+
+ <input type="date" id="dateD" name="dateDP"><br><br>
+
+ <label for='nombredepersonne'>Nombre de personnes:</label><br><br>  
+ <SELECT name="nombredepersonne" id ="nombredepersonne">
+    <option value="">Nombre de personnes</option>
+    <option value="1 Personne ">1 Personne</option>
+    <option value="2 Personne ">2 Personnes</option>
+    <option value="3 Personne ">3 Personnes</option>
+    <option value="4 Personne"> 4 Personnes</option>
+    
+ </SELECT> <br><br>
+ 
+
+<label>Type de chambre:</label><br>
+<input type="radio" id="confort" name="memechoi">
+<label for="confort">confort</label><br>
+
+<input type="radio" id="vue panoramique" name="memechoi">
+
+<label for="confort">vue panoramique</label><br>
+
+<input type="radio" id="prestige" name="memechoi">
+
+<label for="confort">Prestige</label><br>
+
+<input type="radio" id="suite" name="memechoi">
+
+<label for="confort">Suite</label><br><br>
+
+<label>Autres services:</label><br>
+<input type="checkbox" id="voiture" name="voiture">
+<label for="voiture">voiture</label><br>
+
+<input type="checkbox" id="dinner" name="dinner">
+<label for="dinner">Diner(buffet à volonté)</label><br>
+
+<input type="checkbox" id="soiree" name="soiree">
+<label for="soiree">Soirée animée</label><br><br>
+</form>
+
+<input type="submit" value="Envoyer" onclick="javascript:affichage();"  />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+    
+     
+</center>
+  </fieldset>
+
+
+
+  <div><h2>Résérvation pour Mr/Mme : </h2>
+    <p id="1">   </p>
+    <p id="2">    </p>
+    <h3>Date d'arrivée : </h3>
+    <p id="3">    </p>
+    <h3>Date de départ : </h3>
+    <p id="4">    </p>
+    <h3>Nombre de personnes : </h3>
+    <p id="5">    </p>
+    <h3>Type de chambres : </h3>
+    <p id="6">    </p>
+    <h3>Autres Services : </h3>
+    <p id="7">    </p>
+    <p id="8">    </p>
+    <p id="9">    </p> 
+    </div>
+
+</body>
+<footer>
+</footer>
+</html>
+<script type="text/javascript">
+function text()
+{   var choice1= document.getElementById("voiture").checked;
+    var choice2= document.getElementById("dinner").checked;
+    var choice3= document.getElementById("soiree").checked;
+
+
+	if((choice1=="") && (choice2=="") && (choice3==""))
+	{
+		window.alert("Remplir les champs");
+	}
+
+	if(document.form1.nom.value=="" || document.form1.prenom.value==""  )
+		{
+		window.alert("Remplir les champs cliquables");
+	}
+	if(document.form1.dateAR.value=="" || document.form1.dateDP.value=="")
+	{
+		window.alert("remplir les dates")
+
+	}
+	
+
+
+
+}
+
+function affichage()
+{ document.getElementById('1').innerHTML=document.form1.nom.value
+    document.getElementById('2').innerHTML=document.form1.prenom.value
+    document.getElementById('3').innerHTML=document.form1.dateAR.value
+    document.getElementById('4').innerHTML=document.form1.dateDP.value
+    document.getElementById('5').innerHTML=document.form1.nombredepersonne.value
+    if(Confort.checked==1)
+    { 
+    document.getElementById('6').innerHTML=document.form1.confort.value 
+    }
+    else if(Vue_panoramique.checked==1)
+    {
+     document.getElementById('6').innerHTML=document.form1.Vue panoramique.value 
+    }
+    else if(Prestige.checked==1)
+    {
+     document.getElementById('7').innerHTML=document.form1.prestige.value 
+    }
+    else if(Suite.checked==1)
+    {
+     document.getElementById('7').innerHTML=document.form1.suite.value 
+    }
+    if(Voiture.checked==1)
+    {
+    document.getElementById('8').innerHTML=document.form1.voiture.value 
+    }
+    else 
+    {
+    document.getElementById('8').innerHTML=""  
+    }
+    if (Diner.checked==1)
+    {
+    document.getElementById('9').innerHTML=document.form1.dinner.value
+    }
+    else
+    {
+    document.getElementById('9').innerHTML=""     
+    }
+    if (Soiree.checked==1)
+    {
+      document.getElementById('10').innerHTML=document.form1.soiree.value
+    }
+    else 
+    {
+    document.getElementById('10').innerHTML=""      
+    }    
+    
+}
+</script>
+
+
+
+
+
+
+</body>
+<footer>
+</footer>
+</html>
